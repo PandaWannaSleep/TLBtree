@@ -67,7 +67,8 @@ public:
                 exit(-1);
             }
             pop_ = pmemobj_create(file_name, layout_name, pool_size, S_IWUSR | S_IRUSR);
-            meta_ = (MetaType *)pmemobj_direct(pmemobj_root(pop_, sizeof(MetaType)));
+            auto tmp = pmemobj_root(pop_, sizeof(MetaType));
+            meta_ = (MetaType *)pmemobj_direct(tmp);
             
             // maintain volatile domain
             uint64_t alloc_size = (pool_size >> 1) + (pool_size >> 2) + (pool_size >> 3); // 7/8 of the pool is used as block alloction

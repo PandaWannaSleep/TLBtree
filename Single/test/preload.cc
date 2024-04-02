@@ -57,7 +57,10 @@ int main(int argc, char ** argv) {
     
     cout << "tlbtree" << endl;
     TLBtree tree("/mnt/pmem/tlbtree.pool");
+    double start = seconds();
     preload(tree, LOADSCALE, fin);
+    double time = seconds() - start;
+    std::cout<<time<<std::endl;
 
     delete keys;
     fin.close();

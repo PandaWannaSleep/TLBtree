@@ -6,7 +6,7 @@
 using tlbtree::TLBtreeImpl;
 
 // configure the PMEM file and file size
-static constexpr uint64_t POOL_SIZE = 512UL * 1024 * 1024;
+static constexpr uint64_t POOL_SIZE =  1 * (1024UL * 1024 * 1024);
 
 class TLBtree {
 public:

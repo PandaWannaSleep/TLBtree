@@ -9,11 +9,12 @@
 #include <limits>
 #include <cstdint>
 #include <sys/stat.h>
+#include <typeinfo>
 
-#define LOADSCALE 8
+#define LOADSCALE 1
 
 #define KILO 1024
-#define MILLION (KILO * KILO)
+#define MILLION (KILO * KILO)  //KILO * 128
 #define CACHE_LINE_SIZE 64
 
 #define DOFLUSH
@@ -38,6 +39,7 @@ struct Record {
 };
 
 enum OperationType {READ = 0, INSERT, UPDATE, DELETE};
+enum DatasetType {UNIFORM = 0, NORMAL, LOGNORMAL};
 
 struct QueryType {
     OperationType op;

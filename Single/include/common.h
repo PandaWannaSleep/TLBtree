@@ -8,6 +8,7 @@
 #include <cstdint>
 #include <limits>
 #include <sys/stat.h>
+#include <typeinfo>
 
 #define LOADSCALE 8
 #define DOFLUSH

@@ -73,7 +73,7 @@ double run_test(std::vector<QueryType> querys, int thread_cnt) {
 
 
 int main(int argc, char ** argv) {
-    string opt_fname = "../build/workload.txt";
+    string opt_fname = "workload.txt";
     int opt_num_thread = 1;
 
     static const char * optstr = "f:t:h";

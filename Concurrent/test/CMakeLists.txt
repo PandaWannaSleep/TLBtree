@@ -5,3 +5,6 @@ target_link_libraries(main tlbtree)
 
 add_executable(preload "preload.cc")
 target_link_libraries(preload tlbtree)
+
+add_executable(testread "testread.cc")
+target_link_libraries(testread tlbtree)
