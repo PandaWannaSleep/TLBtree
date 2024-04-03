@@ -1,12 +1,9 @@
 #!/bin/bash
 
-scale=$1
-if [ $# -lt 1 ]; then
-    scale=1
-fi
-
+scale=1
+# datasettype = $2
 # Random RO
-./datagen -o $scale -r 1 -i 0
+./datagen -o $scale -r 1 -i 0 -g $1
 mv workload.txt workload1.txt
 
 # Random RH
